@@ -7,18 +7,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="./main.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 
 <body>
     <div id="root" class="container-fluid">
         <div class=" pt-2 pb-2">
-            <button class="bg-primary text-white add-btn btnAdd rounded mr-2">Add contact</button>
-            <button class="bg-secondary text-white add-btn rounded btnCloseForm">closeform</button>
+            <button id="addContact" class="bg-primary text-white add-btn btnAdd rounded mr-2">Add contact</button>
+            <button id="closeForm" class="bg-secondary text-white add-btn rounded btnCloseForm">closeform</button>
         </div>
         <div id="main" class="">
             <div id="table" class="table-responsive pr-3">
@@ -56,7 +58,7 @@
                         <input type="email" name="email" class="form-control" id="id_email" placeholder="Email">
                     </div>
                     <div class="d-flex justify-content-center p-2">
-                        <button type="submit" class="btn btn-success submitButton">Save</button>
+                        <button id="saveData" type="submit" class="btn btn-success submitButton">Save</button>
                         <button type="reset" class="btn btn-secondary ml-2">clear</button>
                     </div>
                 </form>
@@ -64,6 +66,9 @@
         </div>
 
     </div>
+
+    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -75,6 +80,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+
+
+    <!-- CDN jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="jQuery-app.js"></script>
 </body>
 
 </html>
