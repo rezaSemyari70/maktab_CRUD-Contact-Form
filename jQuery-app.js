@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $('#addContact').click(function (e) {
         showForm()
     });
@@ -23,10 +22,15 @@ $(document).ready(function () {
     // --------------- Create Data Function-----------------
 
     function createContact() {
-        let rowTable = $(":input").serializeArray();
-        $('#contact_table').append(`
-            <tbody><tr><td>${rowTable[0].value}</td><td>${rowTable[1].value}</td><td>${rowTable[2].value}</td><td>${rowTable[3].value}</td><td><button id="editInfo" class="btn btn-outline-primary">Edit</button> <button class="btn btn-outline-danger">Delete</button></td></tr></tbody>
-        `)
+       
+        let contactList = $('#contact_form').serializeArray();
+        const tbody = $("<tbody></tbody");
+            const tr =
+                `<tr>
+                    <td>${$('input[name=id]').val()}</td><td>${$('input[name=name]').val()}</td><td>${$('input[name=phone]').val()}</td><td>${$('input[name=email]').val()}</td><td><button class="btn btn-outline-primary">Edit</button> <button class="btn btn-outline-danger">Delete</button></td>
+                </tr>`
+            tbody.append(tr);
+        $("#contact_table").append(tbody);
     }
 
 
@@ -41,5 +45,4 @@ $(document).ready(function () {
     function hideForm() {
         $('#form').css("margin-right", "-272px");
     }
-
 });
